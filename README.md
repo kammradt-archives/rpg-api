@@ -1,3 +1,5 @@
+
+
 # Good to see you!
 
 This repository is responsible for holding my RPG API, and I'll try my best to explain it to you now!
@@ -18,7 +20,10 @@ By using [Grails](https://github.com/grails/) to create the API and [Vue.js](htt
 
 - [Character](#character)
 - [Equipments](#equipments)
-- Weapons
+- [Weapons](#weapons)
+- [Battle](#battle)
+
+---
 
 ## Character
 
@@ -425,4 +430,140 @@ By using [Grails](https://github.com/grails/) to create the API and [Vue.js](htt
 ```
 
 ---
+
+# Battle
+
+### Endpoints
+
+**URL** : `/battle/calculate/:characterId`   **Method** `GET`  
+
+**GET example **: `restapi.com/battle/calculate/1`
+
+**Response example**
+
+```json
+{ 
+   "character":{ 
+      "id":1,
+      "armor":{ 
+         "id":6
+      },
+      "secondaryWeapon":null,
+      "primaryWeapon":null,
+      "shoes":null,
+      "vocation":{ 
+         "enumType":"rpg.api.Vocation",
+         "name":"WARRIOR"
+      },
+      "name":"Kammradt",
+      "gloves":null,
+      "pants":{ 
+         "id":9
+      },
+      "helmet":{ 
+         "id":3
+      }
+   },
+   "damage":0,
+   "defence":100,
+   "power":120
+}
+```
+
+---
+
+**URL** : `/battle/fight`  **Method** `POST`  
+
+**POST example **
+
+```json
+{ 
+   "ids": [1, 2]
+}
+```
+
+**Response example**
+
+```json
+{
+    "winner": {
+        "character": {
+            "id": 1,
+            "armor": {
+                "id": 6
+            },
+            "secondaryWeapon": null,
+            "primaryWeapon": null,
+            "shoes": null,
+            "vocation": {
+                "enumType": "rpg.api.Vocation",
+                "name": "WARRIOR"
+            },
+            "name": "Kammradt",
+            "gloves": null,
+            "pants": {
+                "id": 9
+            },
+            "helmet": {
+                "id": 3
+            }
+        },
+        "damage": 0,
+        "defence": 100,
+        "power": 120
+    },
+    "ranking": [
+        {
+            "character": {
+                "id": 1,
+                "armor": {
+                    "id": 6
+                },
+                "secondaryWeapon": null,
+                "primaryWeapon": null,
+                "shoes": null,
+                "vocation": {
+                    "enumType": "rpg.api.Vocation",
+                    "name": "WARRIOR"
+                },
+                "name": "Kammradt",
+                "gloves": null,
+                "pants": {
+                    "id": 9
+                },
+                "helmet": {
+                    "id": 3
+                }
+            },
+            "damage": 0,
+            "defence": 100,
+            "power": 120
+        },
+        {
+            "character": {
+                "id": 2,
+                "armor": null,
+                "secondaryWeapon": null,
+                "primaryWeapon": null,
+                "shoes": {
+                    "id": 15
+                },
+                "vocation": {
+                    "enumType": "rpg.api.Vocation",
+                    "name": "MAGE"
+                },
+                "name": "Alves",
+                "gloves": {
+                    "id": 12
+                },
+                "pants": null,
+                "helmet": null
+            },
+            "damage": 0,
+            "defence": 23,
+            "power": 25.3
+        }
+    ]
+}
+```
 
