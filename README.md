@@ -29,15 +29,15 @@ By using [Grails](https://github.com/grails/) to create the API and [Vue.js](htt
 
 ### Domain class
 
-**String** name `nullable: false`
-**Weapon** primaryWeapon `nullable: true`
-**Weapon** secondaryWeapon `nullable: true`
-**Vocation** vocation `nullable: true`
-**Helmet** helmet `nullable: true`
-**Armor** armor `nullable: true`
-**Pants** pants `nullable: true`
-**Gloves** gloves `nullable: true`
-**Shoes** shoes `nullable: true`
+**String** name `nullable: false`  
+**Weapon** primaryWeapon `nullable: true`  
+**Weapon** secondaryWeapon `nullable: true`   
+**Vocation** vocation `nullable: true`  
+**Helmet** helmet `nullable: true `   
+**Armor** armor `nullable: true `   
+**Pants** pants `nullable: true `   
+**Gloves** gloves `nullable: true  `  
+**Shoes** shoes `nullable: true`    
 
 ---
 
@@ -45,7 +45,7 @@ By using [Grails](https://github.com/grails/) to create the API and [Vue.js](htt
 
 **URL** : `/character/index`   **Method** `GET`  
 
-**GET example **: `restapi.com/character/index`
+**GET example**: `restapi.com/character/index`
 
 **Response example**
 
@@ -308,7 +308,7 @@ By using [Grails](https://github.com/grails/) to create the API and [Vue.js](htt
 
 > All equipments (Helmet, Armor, Pants, Gloves, Shoes) inherit from `Equipament`
 
-**String** name `nullable: false`
+**String** name `nullable: false`  
 **Float**  defence `nullable: false`
 
 ---
@@ -317,7 +317,7 @@ By using [Grails](https://github.com/grails/) to create the API and [Vue.js](htt
 
 **URL** : `/:equipamentName/index`   **Method** `GET`  
 
-**GET example **: `restapi.com/armor/index`
+**GET example**: `restapi.com/armor/index`
 
 **Response example**
 
@@ -363,10 +363,10 @@ By using [Grails](https://github.com/grails/) to create the API and [Vue.js](htt
 
 ### Domain class
 
-**String** name `nullable: false`
-**Float**  damage `nullable: true`
-**Float**  defence `nullable: true`
-**Boolean**  isTwoHanded `nullable: true`
+**String** name `nullable: false`  
+**Float**  damage `nullable: true`  
+**Float**  defence `nullable: true `   
+**Boolean**  isTwoHanded `nullable: true ` 
 
 ---
 
@@ -374,7 +374,7 @@ By using [Grails](https://github.com/grails/) to create the API and [Vue.js](htt
 
 **URL** : `/weapon/index`   **Method** `GET`  
 
-**GET example **: `restapi.com/weapon/index`
+**GET example**: `restapi.com/weapon/index`
 
 **Response example**
 
@@ -437,7 +437,7 @@ By using [Grails](https://github.com/grails/) to create the API and [Vue.js](htt
 
 **URL** : `/battle/calculate/:characterId`   **Method** `GET`  
 
-**GET example **: `restapi.com/battle/calculate/1`
+**GET example**: `restapi.com/battle/calculate/1`
 
 **Response example**
 
@@ -474,7 +474,7 @@ By using [Grails](https://github.com/grails/) to create the API and [Vue.js](htt
 
 **URL** : `/battle/fight`  **Method** `POST`  
 
-**POST example **
+**POST example**
 
 ```json
 { 
@@ -566,4 +566,6 @@ By using [Grails](https://github.com/grails/) to create the API and [Vue.js](htt
     ]
 }
 ```
+
+---
 
