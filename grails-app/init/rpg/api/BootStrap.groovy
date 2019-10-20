@@ -45,6 +45,7 @@ class BootStrap {
                 new Weapon(name: 'Long Sword', damage: 30),
                 new Weapon(name: 'Fight Club', damage: 20, defence: 10, isTwoHanded: true),
                 new Weapon(name: 'Wood Shield', defence: 40, isTwoHanded: true),
+                new Weapon(name: 'Iron Shield', defence: 30)
         )
 
         Character kamm = new Character(
@@ -52,20 +53,22 @@ class BootStrap {
                 vocation: Vocation.WARRIOR,
                 helmet: Helmet.findByName("Gold Helmet"),
                 armor: Armor.findByName("Gold Armor"),
-                pants: Pants.findByName("Fancy")
+                pants: Pants.findByName("Fancy"),
+                primaryWeapon: Weapon.findByName('Fight Club')
         )
 
         Character alves = new Character(
                 name: "Alves",
                 vocation: Vocation.MAGE,
                 shoes: Shoes.findByName("Magic Shoes"),
-                gloves: Gloves.findByName("Fancy")
+                gloves: Gloves.findByName("Fancy"),
+                primaryWeapon: Weapon.findByName('Long Sword'),
+                secondaryWeapon: Weapon.findByName('Iron Shield')
         )
 
-
         Character.saveAll(kamm, alves)
-
     }
+
     def destroy = {
     }
 }
